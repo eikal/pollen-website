@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pollen Data Governance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav__brand">Pollen</div>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#values">Values</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#platform">Platform</a>
+      <a href="#cta">Talk to us</a>
+    </nav>
+    <button class="nav__toggle" aria-label="Toggle menu">☰</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__content">
+        <p class="pill">Independent data governance for business-led teams</p>
+        <h1>Let business own its data, without vendor lock-in.</h1>
+        <p class="lead">Pollen gives organizations a modern data governance layer—AI-powered catalog, API gateway, data contracts, and monetization—designed to keep business owners in control, not the tools.</p>
+        <div class="hero__actions">
+          <a class="btn primary" href="#cta">Book a demo</a>
+          <a class="btn ghost" href="#solutions">See how it works</a>
+        </div>
+        <div class="hero__stats">
+          <div>
+            <span class="stat">65%</span>
+            <small>faster data onboarding for external consumers</small>
+          </div>
+          <div>
+            <span class="stat">0 lock-in</span>
+            <small>bring your own cloud, db, or toolchain</small>
+          </div>
+          <div>
+            <span class="stat">AI-native</span>
+            <small>MCP server that classifies and documents automatically</small>
+          </div>
+        </div>
+      </div>
+      <div class="hero__card">
+        <div class="card__header">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="chip">Catalog AI</span>
+        </div>
+        <div class="card__body">
+          <p class="card__title">Adaptive Data Glossary</p>
+          <ul class="card__list">
+            <li>Suggests business terms and owners from usage patterns.</li>
+            <li>Maps schemas to contracts with impact analysis.</li>
+            <li>Publishes APIs for internal and external access in one step.</li>
+          </ul>
+          <div class="card__footer">
+            <span class="pulse"></span>
+            <div>
+              <p class="card__label">MCP Server</p>
+              <p class="card__meta">Realtime governance assistant</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="values" class="section values">
+      <div class="section__header">
+        <p class="pill">Why Pollen</p>
+        <h2>Business-first data control, without coupling to any vendor.</h2>
+        <p class="sub">Your business owns the logic. Pollen decouples governance from specific databases, clouds, or SaaS so you can swap tools without rewriting the rules.</p>
+      </div>
+      <div class="grid two">
+        <article class="card">
+          <h3>Ownership lives with the business</h3>
+          <p>Define policies, terms, and contracts in language business teams own. Apps subscribe to the contract—never the other way around.</p>
+          <ul>
+            <li>Change a rule once, enforce it across any data product.</li>
+            <li>Auto-notify consumers when definitions evolve.</li>
+            <li>Trace lineage from glossary terms to APIs and reports.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Zero vendor lock-in</h3>
+          <p>Keep governance portable across clouds and stacks. Pollen focuses on the business rules so you can modernize tooling on your timeline.</p>
+          <ul>
+            <li>Connect any lakehouse, warehouse, or db.</li>
+            <li>API gateway works with your existing identity and observability.</li>
+            <li>Contracts stay stable even when tech changes.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="solutions" class="section solutions">
+      <div class="section__header">
+        <p class="pill">What we deliver</p>
+        <h2>The four pillars of the Pollen platform.</h2>
+        <p class="sub">From discovery to revenue, one cohesive governance layer that is business-led, AI-native, and vendor-neutral.</p>
+      </div>
+      <div class="grid four">
+        <article class="tile">
+          <div class="tile__icon">📚</div>
+          <h3>Smart Data Catalog</h3>
+          <p>AI (MCP server) classifies assets, generates glossaries, and suggests owners. Approvals stay with data stewards.</p>
+          <ul>
+            <li>Semantic search across all sources</li>
+            <li>Automated PII/PHI tagging</li>
+            <li>Human-in-the-loop validation</li>
+          </ul>
+        </article>
+        <article class="tile">
+          <div class="tile__icon">🔗</div>
+          <h3>API Gateway</h3>
+          <p>Expose governed data products to internal and external consumers with consistent auth, throttling, and observability.</p>
+          <ul>
+            <li>Federated across clouds</li>
+            <li>Schema-aware routing</li>
+            <li>Usage analytics for every consumer</li>
+          </ul>
+        </article>
+        <article class="tile">
+          <div class="tile__icon">🧾</div>
+          <h3>Data Contracts</h3>
+          <p>Contracts align producers and consumers with SLAs, quality rules, and change alerts that are tool-agnostic.</p>
+          <ul>
+            <li>Versioned definitions and lineage</li>
+            <li>Automated impact analysis</li>
+            <li>Policy as code, portable anywhere</li>
+          </ul>
+        </article>
+        <article class="tile">
+          <div class="tile__icon">💠</div>
+          <h3>Data Monetization</h3>
+          <p>Package data products, manage permissions, and meter consumption for partners and marketplaces without new pipelines.</p>
+          <ul>
+            <li>Offer catalogs with curated SLAs</li>
+            <li>Price by usage or outcome</li>
+            <li>Audit-ready access trails</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="platform" class="section platform">
+      <div class="platform__grid">
+        <div class="platform__panel">
+          <p class="pill">Architecture</p>
+          <h2>Governance that moves with your stack.</h2>
+          <p>Deploy Pollen alongside your existing tools. We integrate with your identity, observability, storage, and delivery choices—on-prem or any cloud.</p>
+          <div class="badges">
+            <span>Lakehouse / Warehouse</span>
+            <span>Event Streams</span>
+            <span>Object Storage</span>
+            <span>APM & Logs</span>
+            <span>IAM</span>
+          </div>
+        </div>
+        <div class="platform__diagram">
+          <div class="layer layer--top">
+            <p>Business Rules & Contracts</p>
+          </div>
+          <div class="layer">
+            <p>Data Catalog (AI) • Lineage • Quality</p>
+          </div>
+          <div class="layer">
+            <p>API Gateway • Access Control • Observability</p>
+          </div>
+          <div class="layer layer--bottom">
+            <p>Your tools: cloud, db, streams, apps</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section proof">
+      <div class="section__header">
+        <p class="pill">Outcomes</p>
+        <h2>From chaos to clarity in weeks, not months.</h2>
+      </div>
+      <div class="grid three">
+        <article class="statcard">
+          <p class="statcard__value">-40%</p>
+          <p class="statcard__label">Runbook overhead when onboarding new consumers.</p>
+        </article>
+        <article class="statcard">
+          <p class="statcard__value">+30%</p>
+          <p class="statcard__label">Increase in certified data products shipped per quarter.</p>
+        </article>
+        <article class="statcard">
+          <p class="statcard__value">3x</p>
+          <p class="statcard__label">Faster time-to-contract for external partnerships.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="cta" class="section cta">
+      <div class="cta__content">
+        <h2>Ready to put the business back in charge of data?</h2>
+        <p>Pollen makes governance portable, AI-assisted, and designed for business ownership. See how it fits into your architecture.</p>
+        <form class="cta__form">
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="email" name="email" placeholder="Work email" required />
+          <input type="text" name="org" placeholder="Organization" />
+          <button type="submit" class="btn primary">Book a demo</button>
+        </form>
+        <p class="microcopy">We do not sell your data. Ever.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">Pollen</div>
+    <div class="footer__links">
+      <a href="#values">Values</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#cta">Contact</a>
+    </div>
+    <p class="footer__note">Built for business-owned, vendor-neutral data governance.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
