@@ -460,7 +460,40 @@ html.lang-en .footer__links a { color: #94a3b8; }
 html.lang-en .footer__links a:hover { color: #e2e8f0; }
 
 /* Main wrapper */
-#main-en { background: #f8fafc; color: #1e293b; }
+#main-en {
+  background: #f8fafc;
+  color: #1e293b;
+  --text: #1e293b;
+  --muted: #64748b;
+  --stroke: rgba(15, 23, 42, 0.12);
+}
+
+html.lang-en #main-en .card,
+html.lang-en #main-en .tile,
+html.lang-en #main-en .statcard,
+html.lang-en #main-en .hero__card,
+html.lang-en #main-en .platform__panel,
+html.lang-en #main-en .platform__diagram {
+  background: #ffffff;
+  border-color: #dbe4f2;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+}
+
+html.lang-en #main-en .layer {
+  background: #f8fafc;
+  border-color: #dbe4f2;
+  color: #334155;
+}
+
+html.lang-en #main-en .layer--top {
+  background: #dbeafe;
+  color: #1e3a8a;
+}
+
+html.lang-en #main-en .layer--bottom {
+  background: #e2e8f0;
+  color: #334155;
+}
 
 /* Containers */
 .en-container { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
