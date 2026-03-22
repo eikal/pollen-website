@@ -15,6 +15,7 @@ const footerSolutions = document.querySelector('#footerSolutions');
 const footerCta = document.querySelector('#footerCta');
 const footerNote = document.querySelector('#footerNote');
 const LANGUAGE_STORAGE_KEY = 'pollen-site-language';
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/rtakss@gmail.com';
 
 let currentLang = 'en';
 
@@ -108,14 +109,45 @@ if (langToggle) {
 }
 
 document.querySelectorAll('.cta__form').forEach((form) => {
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    if (currentLang === 'he') {
-      alert('תודה! נחזור אליכם בהקדם.');
-      return;
+
+    const submitButton = form.querySelector('button[type="submit"]');
+    if (submitButton) {
+      submitButton.disabled = true;
     }
 
-    alert('Thanks! We will reach out shortly.');
+    const formData = new FormData(form);
+    const isHebrew = currentLang === 'he';
+
+    formData.append('_subject', isHebrew ? 'בקשת שירות חדשה מאתר Pollen' : 'New service request from Pollen website');
+    formData.append('_template', 'table');
+    formData.append('_captcha', 'false');
+    formData.append('language', isHebrew ? 'he' : 'en');
+    formData.append('request_type', 'service-request');
+
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error('Form submission failed');
+      }
+
+      form.reset();
+      alert(isHebrew ? 'תודה! בקשת השירות נשלחה ונחזור אליכם בהקדם.' : 'Thanks! Your service request was sent and we will contact you shortly.');
+    } catch (error) {
+      alert(isHebrew ? 'לא הצלחנו לשלוח כרגע. אפשר לכתוב ל-rtakss@gmail.com.' : 'Unable to send right now. Please email rtakss@gmail.com directly.');
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+      }
+    }
   });
 });
 

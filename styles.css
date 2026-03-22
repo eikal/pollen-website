@@ -352,7 +352,19 @@ main { overflow: hidden; }
   color: var(--text);
 }
 
+.cta__form textarea {
+  background: #0f1320;
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  padding: 12px;
+  color: var(--text);
+  resize: vertical;
+  min-height: 96px;
+  font: inherit;
+}
+
 .cta__form input::placeholder { color: var(--muted); }
+.cta__form textarea::placeholder { color: var(--muted); }
 
 .btn {
   display: inline-flex;
