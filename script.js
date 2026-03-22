@@ -62,9 +62,9 @@ function applyLanguage(lang) {
     navPlatform.textContent = isHebrew ? 'פלטפורמה' : 'Process';
     navCta.textContent = isHebrew ? 'צור קשר' : 'Book a Call';
 
-    navValues.setAttribute('href', isHebrew ? '#values-he' : '#problem-en');
-    navSolutions.setAttribute('href', isHebrew ? '#solutions-he' : '#what-we-do-en');
-    navPlatform.setAttribute('href', isHebrew ? '#platform-he' : '#process-en');
+    navValues.setAttribute('href', isHebrew ? '#values-he' : '#values-en');
+    navSolutions.setAttribute('href', isHebrew ? '#solutions-he' : '#solutions-en');
+    navPlatform.setAttribute('href', isHebrew ? '#platform-he' : '#platform-en');
     navCta.setAttribute('href', isHebrew ? '#cta-he' : '#cta-en');
   }
 
@@ -73,8 +73,8 @@ function applyLanguage(lang) {
     footerSolutions.textContent = isHebrew ? 'פתרונות' : 'Services';
     footerCta.textContent = isHebrew ? 'צור קשר' : 'Contact';
 
-    footerValues.setAttribute('href', isHebrew ? '#values-he' : '#problem-en');
-    footerSolutions.setAttribute('href', isHebrew ? '#solutions-he' : '#what-we-do-en');
+    footerValues.setAttribute('href', isHebrew ? '#values-he' : '#values-en');
+    footerSolutions.setAttribute('href', isHebrew ? '#solutions-he' : '#solutions-en');
     footerCta.setAttribute('href', isHebrew ? '#cta-he' : '#cta-en');
 
     footerNote.textContent = isHebrew
