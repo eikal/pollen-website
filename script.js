@@ -52,32 +52,34 @@ function applyLanguage(lang) {
 
   if (document && document.documentElement) {
     document.documentElement.lang = isHebrew ? 'he' : 'en';
+    document.documentElement.classList.toggle('lang-en', !isHebrew);
+    document.title = isHebrew ? 'Pollen – הערכת נתונים עסקית' : 'Business Data Assessment | Pollen';
   }
 
   if (navValues && navSolutions && navPlatform && navCta) {
-    navValues.textContent = isHebrew ? 'ערכים' : 'Values';
-    navSolutions.textContent = isHebrew ? 'פתרונות' : 'Solutions';
-    navPlatform.textContent = isHebrew ? 'פלטפורמה' : 'Platform';
-    navCta.textContent = isHebrew ? 'צור קשר' : 'Talk to us';
+    navValues.textContent = isHebrew ? 'ערכים' : 'Problem';
+    navSolutions.textContent = isHebrew ? 'פתרונות' : 'Services';
+    navPlatform.textContent = isHebrew ? 'פלטפורמה' : 'Process';
+    navCta.textContent = isHebrew ? 'צור קשר' : 'Book a Call';
 
-    navValues.setAttribute('href', isHebrew ? '#values-he' : '#values-en');
-    navSolutions.setAttribute('href', isHebrew ? '#solutions-he' : '#solutions-en');
-    navPlatform.setAttribute('href', isHebrew ? '#platform-he' : '#platform-en');
+    navValues.setAttribute('href', isHebrew ? '#values-he' : '#problem-en');
+    navSolutions.setAttribute('href', isHebrew ? '#solutions-he' : '#what-we-do-en');
+    navPlatform.setAttribute('href', isHebrew ? '#platform-he' : '#process-en');
     navCta.setAttribute('href', isHebrew ? '#cta-he' : '#cta-en');
   }
 
   if (footerValues && footerSolutions && footerCta && footerNote) {
-    footerValues.textContent = isHebrew ? 'ערכים' : 'Values';
-    footerSolutions.textContent = isHebrew ? 'פתרונות' : 'Solutions';
+    footerValues.textContent = isHebrew ? 'ערכים' : 'Problem';
+    footerSolutions.textContent = isHebrew ? 'פתרונות' : 'Services';
     footerCta.textContent = isHebrew ? 'צור קשר' : 'Contact';
 
-    footerValues.setAttribute('href', isHebrew ? '#values-he' : '#values-en');
-    footerSolutions.setAttribute('href', isHebrew ? '#solutions-he' : '#solutions-en');
+    footerValues.setAttribute('href', isHebrew ? '#values-he' : '#problem-en');
+    footerSolutions.setAttribute('href', isHebrew ? '#solutions-he' : '#what-we-do-en');
     footerCta.setAttribute('href', isHebrew ? '#cta-he' : '#cta-en');
 
     footerNote.textContent = isHebrew
       ? 'נבנה עבור בעלות עסקית על נתונים וללא תלות בספק.'
-      : 'Built for business-owned, vendor-neutral data governance.';
+      : 'Business Data Assessment — clear answers from your business data.';
   }
 
   setStoredLanguage(normalizedLang);
