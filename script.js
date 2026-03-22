@@ -14,75 +14,55 @@ const footerValues = document.querySelector('#footerValues');
 const footerSolutions = document.querySelector('#footerSolutions');
 const footerCta = document.querySelector('#footerCta');
 const footerNote = document.querySelector('#footerNote');
-const LANGUAGE_STORAGE_KEY = 'pollen-site-language';
 const FORM_ENDPOINT = 'https://formsubmit.co/ajax/rtakss@gmail.com';
 
 let currentLang = 'en';
 
-function getStoredLanguage() {
-  try {
-    const stored = localStorage.getItem(LANGUAGE_STORAGE_KEY);
-    return stored === 'he' ? 'he' : 'en';
-  } catch (error) {
-    return 'en';
+function applyLanguage() {
+  currentLang = 'en';
+  const isHebrew = false;
+
+  if (mainEn) {
+    mainEn.classList.remove('hidden');
   }
-}
 
-function setStoredLanguage(lang) {
-  try {
-    localStorage.setItem(LANGUAGE_STORAGE_KEY, lang);
-  } catch (error) {
-    // Ignore storage errors in restricted browsing modes.
-  }
-}
-
-function applyLanguage(lang) {
-  const normalizedLang = lang === 'he' ? 'he' : 'en';
-  currentLang = normalizedLang;
-  const isHebrew = normalizedLang === 'he';
-
-  if (mainEn && mainHe) {
-    mainEn.classList.toggle('hidden', isHebrew);
-    mainHe.classList.toggle('hidden', !isHebrew);
+  if (mainHe) {
+    mainHe.classList.add('hidden');
   }
 
   if (langToggle) {
-    langToggle.textContent = isHebrew ? 'English' : 'עברית';
+    langToggle.classList.add('hidden');
   }
 
   if (document && document.documentElement) {
-    document.documentElement.lang = isHebrew ? 'he' : 'en';
-    document.documentElement.classList.toggle('lang-en', !isHebrew);
-    document.title = isHebrew ? 'Pollen – הערכת נתונים עסקית' : 'Enterprise Data Independence Assessment | Pollen';
+    document.documentElement.lang = 'en';
+    document.documentElement.classList.add('lang-en');
+    document.title = 'Enterprise Data Independence Assessment | Pollen';
   }
 
   if (navValues && navSolutions && navPlatform && navCta) {
-    navValues.textContent = isHebrew ? 'ערכים' : 'Problem';
-    navSolutions.textContent = isHebrew ? 'פתרונות' : 'Assessment';
-    navPlatform.textContent = isHebrew ? 'פלטפורמה' : 'Deliverables';
-    navCta.textContent = isHebrew ? 'צור קשר' : 'Book a Call';
+    navValues.textContent = 'Problem';
+    navSolutions.textContent = 'Assessment';
+    navPlatform.textContent = 'Deliverables';
+    navCta.textContent = 'Book a Call';
 
-    navValues.setAttribute('href', isHebrew ? '#values-he' : '#values-en');
-    navSolutions.setAttribute('href', isHebrew ? '#solutions-he' : '#solutions-en');
-    navPlatform.setAttribute('href', isHebrew ? '#platform-he' : '#platform-en');
-    navCta.setAttribute('href', isHebrew ? '#cta-he' : '#cta-en');
+    navValues.setAttribute('href', '#values-en');
+    navSolutions.setAttribute('href', '#solutions-en');
+    navPlatform.setAttribute('href', '#platform-en');
+    navCta.setAttribute('href', '#cta-en');
   }
 
   if (footerValues && footerSolutions && footerCta && footerNote) {
-    footerValues.textContent = isHebrew ? 'ערכים' : 'Problem';
-    footerSolutions.textContent = isHebrew ? 'פתרונות' : 'Assessment';
-    footerCta.textContent = isHebrew ? 'צור קשר' : 'Contact';
+    footerValues.textContent = 'Problem';
+    footerSolutions.textContent = 'Assessment';
+    footerCta.textContent = 'Contact';
 
-    footerValues.setAttribute('href', isHebrew ? '#values-he' : '#values-en');
-    footerSolutions.setAttribute('href', isHebrew ? '#solutions-he' : '#solutions-en');
-    footerCta.setAttribute('href', isHebrew ? '#cta-he' : '#cta-en');
+    footerValues.setAttribute('href', '#values-en');
+    footerSolutions.setAttribute('href', '#solutions-en');
+    footerCta.setAttribute('href', '#cta-en');
 
-    footerNote.textContent = isHebrew
-      ? 'נבנה עבור בעלות עסקית על נתונים וללא תלות בספק.'
-      : 'Business Data Assessment — clear answers from your business data.';
+    footerNote.textContent = 'Enterprise Data Independence Assessment — clear answers from your business data.';
   }
-
-  setStoredLanguage(normalizedLang);
 }
 
 if (toggle) {
@@ -98,15 +78,6 @@ if (links) {
         nav.classList.remove('open');
       }
     });
-  });
-}
-
-if (langToggle) {
-  langToggle.addEventListener('click', () => {
-    applyLanguage(currentLang === 'en' ? 'he' : 'en');
-    if (nav) {
-      nav.classList.remove('open');
-    }
   });
 }
 
@@ -153,4 +124,4 @@ document.querySelectorAll('.cta__form').forEach((form) => {
   });
 });
 
-applyLanguage(getStoredLanguage());
+applyLanguage();
