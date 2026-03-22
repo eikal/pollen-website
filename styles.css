@@ -609,6 +609,25 @@ html.lang-en #main-en .layer--bottom {
 .en-section--blue { background: linear-gradient(135deg, #0f2147, #1e3a7a); color: #ffffff; }
 .en-section--cta { background: #f8fafc; border-top: 3px solid #1e40af; }
 
+html.lang-en #main-en .cta__content {
+  max-width: 780px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #dbe4f2;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.08);
+  color: #1e293b;
+}
+
+html.lang-en #main-en .cta__content h2 {
+  color: #0f172a;
+}
+
+html.lang-en #main-en .cta__content p {
+  color: #475569;
+}
+
 .en-tag {
   display: inline-block;
   font-size: 11px;
