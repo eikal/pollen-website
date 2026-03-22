@@ -53,13 +53,13 @@ function applyLanguage(lang) {
   if (document && document.documentElement) {
     document.documentElement.lang = isHebrew ? 'he' : 'en';
     document.documentElement.classList.toggle('lang-en', !isHebrew);
-    document.title = isHebrew ? 'Pollen – הערכת נתונים עסקית' : 'Business Data Assessment | Pollen';
+    document.title = isHebrew ? 'Pollen – הערכת נתונים עסקית' : 'Enterprise Data Independence Assessment | Pollen';
   }
 
   if (navValues && navSolutions && navPlatform && navCta) {
     navValues.textContent = isHebrew ? 'ערכים' : 'Problem';
-    navSolutions.textContent = isHebrew ? 'פתרונות' : 'Services';
-    navPlatform.textContent = isHebrew ? 'פלטפורמה' : 'Process';
+    navSolutions.textContent = isHebrew ? 'פתרונות' : 'Assessment';
+    navPlatform.textContent = isHebrew ? 'פלטפורמה' : 'Deliverables';
     navCta.textContent = isHebrew ? 'צור קשר' : 'Book a Call';
 
     navValues.setAttribute('href', isHebrew ? '#values-he' : '#values-en');
@@ -70,7 +70,7 @@ function applyLanguage(lang) {
 
   if (footerValues && footerSolutions && footerCta && footerNote) {
     footerValues.textContent = isHebrew ? 'ערכים' : 'Problem';
-    footerSolutions.textContent = isHebrew ? 'פתרונות' : 'Services';
+    footerSolutions.textContent = isHebrew ? 'פתרונות' : 'Assessment';
     footerCta.textContent = isHebrew ? 'צור קשר' : 'Contact';
 
     footerValues.setAttribute('href', isHebrew ? '#values-he' : '#values-en');
