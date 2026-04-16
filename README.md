@@ -80,3 +80,25 @@ All content is in `index.html`. Edit directly to update copy, stats, or sections
 ## License
 
 Built for Pollen Data Governance.
+\n+---
+\n+## Multiple Site Versions
+\n+This repo now includes an additional site version oriented for local businesses in Israel (Hebrew, non-technical):
+\n+- Default (English): root files — index.html, styles.css, script.js
+- Israel Business (Hebrew): versions/israel-hebrew/
+\n+### Israel Business (Hebrew)
+Audience: local businesses in Israel, with no technical orientation.
+\n+Focus:
+- Modernizing current data tools and processes
+- Data management that improves business performance for internal and external data customers (e.g., analysts)
+- Converting old tools to new ones by mapping and modeling data
+- Lower price leveraging open-source and AI-assisted environments
+\n+Location:
+- See versions/israel-hebrew/index.html
+\n+#### Quick Preview
+Open the desired index.html directly in your browser.
+\n+On Windows PowerShell you can also run a quick local server from the Hebrew version folder:
+\n+```powershell
+cd d:\vscode\pollen\website\versions\israel-hebrew
+python -m http.server 8080
+```
+\n+Then visit http://localhost:8080.

@@ -21,6 +21,10 @@ let currentLang = 'en';
 function applyLanguage() {
   currentLang = 'en';
   const isHebrew = false;
+  const currentPath = window.location.pathname.split('/').pop().toLowerCase();
+  const isIndexPage = currentPath === '' || currentPath === 'index.html';
+  const isSolutionsPage = currentPath === 'solutions.html';
+  const isUseCasesPage = currentPath === 'use-cases.html';
 
   if (mainEn) {
     mainEn.classList.remove('hidden');
@@ -37,31 +41,31 @@ function applyLanguage() {
   if (document && document.documentElement) {
     document.documentElement.lang = 'en';
     document.documentElement.classList.add('lang-en');
-    document.title = 'Enterprise Data Independence Assessment | Pollen';
+    document.title = 'Turn Data Into Business Value | Pollen Data';
   }
 
   if (navValues && navSolutions && navPlatform && navCta) {
     navValues.textContent = 'Problem';
-    navSolutions.textContent = 'Assessment';
-    navPlatform.textContent = 'Deliverables';
-    navCta.textContent = 'Book a Call';
+    navSolutions.textContent = 'Solutions';
+    navPlatform.textContent = 'Use Cases';
+    navCta.textContent = 'Start Assessment';
 
-    navValues.setAttribute('href', '#values-en');
-    navSolutions.setAttribute('href', '#solutions-en');
-    navPlatform.setAttribute('href', '#platform-en');
+    navValues.setAttribute('href', isIndexPage ? '#values-en' : 'index.html#values-en');
+    navSolutions.setAttribute('href', isSolutionsPage ? '#solutions-top' : 'solutions.html');
+    navPlatform.setAttribute('href', isUseCasesPage ? '#use-cases-top' : 'use-cases.html');
     navCta.setAttribute('href', '#cta-en');
   }
 
   if (footerValues && footerSolutions && footerCta && footerNote) {
     footerValues.textContent = 'Problem';
-    footerSolutions.textContent = 'Assessment';
+    footerSolutions.textContent = 'Solutions';
     footerCta.textContent = 'Contact';
 
-    footerValues.setAttribute('href', '#values-en');
-    footerSolutions.setAttribute('href', '#solutions-en');
+    footerValues.setAttribute('href', isIndexPage ? '#values-en' : 'index.html#values-en');
+    footerSolutions.setAttribute('href', isSolutionsPage ? '#solutions-top' : 'solutions.html');
     footerCta.setAttribute('href', '#cta-en');
 
-    footerNote.textContent = 'Enterprise Data Independence Assessment — clear answers from your business data.';
+    footerNote.textContent = 'From fragmented data to business-ready capabilities.';
   }
 }
 
